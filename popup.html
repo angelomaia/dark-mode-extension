@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Simple Dark Mode</h1>
+      <p id="host" class="host"></p>
+    </header>
+
+    <section id="unsupported" hidden>
+      <p class="note">Dark mode can't run on this page (browser or store pages are protected).</p>
+    </section>
+
+    <section id="controls">
+      <label class="row">
+        <span>Dark mode on this site</span>
+        <input type="checkbox" id="site-toggle" class="switch" />
+      </label>
+    </section>
+
+    <section>
+      <label class="row">
+        <span>Enable on all sites by default</span>
+        <input type="checkbox" id="default-toggle" class="switch" />
+      </label>
+    </section>
+
+    <section class="sliders">
+      <label>
+        <span>Brightness <output id="brightness-out"></output></span>
+        <input type="range" id="brightness" min="50" max="150" step="5" />
+      </label>
+      <label>
+        <span>Contrast <output id="contrast-out"></output></span>
+        <input type="range" id="contrast" min="50" max="150" step="5" />
+      </label>
+    </section>
+
+    <footer>
+      <span class="note">Shortcut: Alt+Shift+D</span>
+      <button id="reset" type="button">Reset site</button>
+    </footer>
+
+    <script src="settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
